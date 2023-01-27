@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('course');
+            $table->enum('difficulty', ['H', 'M', 'L']);
+            $table->datetime('hours');
+            $table->integer('credits');
             $table->timestamps();
         });
     }
