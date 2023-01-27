@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('age');
             $table->date('birthdate');
             $table->integer('course');
-            $table->float('avg', 0);
+            $table->float('avg')->default(0);
             $table->enum('genre', ['M', 'F', 'NB']);
             $table->string('email');
             $table->timestamps();
